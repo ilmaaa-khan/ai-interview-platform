@@ -1,0 +1,172 @@
+.feedback-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Score row ──────────────────────────────── */
+.fb-score-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.fb-score-circle {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+}
+
+.fb-score-svg {
+  width: 68px;
+  height: 68px;
+  transform: rotate(-90deg);
+}
+
+.fb-score-track {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 100 100;
+  vector-effect: non-scaling-stroke;
+}
+
+.fb-score-fill {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  transition: stroke-dasharray 0.8s ease;
+  stroke-dashoffset: 0;
+}
+
+.fb-score-num {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fb-grade-info { flex: 1; }
+
+.fb-grade {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+
+.fb-summary {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Sections ───────────────────────────────── */
+.fb-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fb-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.fb-section-title--good { color: var(--success); }
+.fb-section-title--improve { color: var(--warning); }
+
+.fb-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.fb-list-item {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid transparent;
+  color: var(--text-secondary);
+}
+.fb-list-item--good {
+  background: var(--success-light);
+  border-left-color: var(--success);
+  color: var(--text-primary);
+}
+.fb-list-item--improve {
+  background: var(--warning-light);
+  border-left-color: var(--warning);
+  color: var(--text-primary);
+}
+
+.fb-model-answer {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding: 0.75rem 1rem;
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-secondary);
+}
+
+.fb-resources {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.fb-resource-tag {
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+/* ── Answer recap ───────────────────────────── */
+.fb-answer-recap {
+  border-top: 1.5px solid var(--border);
+  padding-top: 0.875rem;
+}
+
+.fb-answer-toggle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color var(--transition);
+}
+.fb-answer-toggle:hover { color: var(--text-primary); }
+.fb-answer-toggle::-webkit-details-marker { display: none; }
+
+.fb-answer-text {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  background: var(--bg-secondary);
+  padding: 0.875rem;
+  border-radius: var(--radius-sm);
+  white-space: pre-wrap;
+}

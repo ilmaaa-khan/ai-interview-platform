@@ -1,0 +1,198 @@
+.progress-view {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.pv-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.pv-title { font-size: 2rem; margin-bottom: 0.25rem; }
+.pv-sub { color: var(--text-secondary); }
+
+.clear-confirm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+/* ── Empty state ────────────────────────────── */
+.pv-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.pv-empty-icon { font-size: 3rem; }
+.pv-empty h2 { font-size: 1.5rem; }
+.pv-empty p { color: var(--text-secondary); max-width: 360px; }
+
+/* ── Stats row ──────────────────────────────── */
+.pv-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.pv-stat-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  transition: border-color var(--transition);
+}
+.pv-stat-card:hover { border-color: var(--stat-color); }
+.pv-stat-icon { font-size: 1.4rem; }
+.pv-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.pv-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Section ────────────────────────────────── */
+.pv-section { }
+.pv-section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Category cards ─────────────────────────── */
+.pv-cats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.pv-cat-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition: border-color var(--transition);
+}
+.pv-cat-card:hover { border-color: var(--accent); }
+
+.pv-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.pv-cat-icon { font-size: 1.5rem; }
+.pv-cat-info { flex: 1; }
+.pv-cat-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.pv-cat-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.pv-cat-score {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pv-cat-bar-wrap {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.pv-cat-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s ease;
+}
+
+.pv-recent-answers {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.pv-answer-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pv-cat-practice-btn {
+  align-self: flex-start;
+}
+
+/* ── Distribution ───────────────────────────── */
+.pv-dist-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pv-dist-row {
+  display: grid;
+  grid-template-columns: 100px 70px 1fr 40px;
+  align-items: center;
+  gap: 0.75rem;
+}
+.pv-dist-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.pv-dist-range {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.pv-dist-bar-wrap {
+  height: 10px;
+  background: var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.pv-dist-bar {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.8s ease;
+  min-width: 4px;
+}
+.pv-dist-count {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 700px) {
+  .pv-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .pv-cats-grid { grid-template-columns: 1fr; }
+  .pv-dist-row { grid-template-columns: 80px 60px 1fr 36px; }
+}
+@media (max-width: 480px) {
+  .pv-stats-row { grid-template-columns: 1fr 1fr; }
+}

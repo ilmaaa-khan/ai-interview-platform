@@ -1,0 +1,201 @@
+.settings-view {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sv-header { }
+.sv-title { font-size: 2rem; margin-bottom: 0.25rem; }
+.sv-sub { color: var(--text-secondary); }
+
+/* ── Sections ───────────────────────────────── */
+.sv-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sv-section {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sv-section-header { }
+.sv-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+.sv-section-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.sv-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sv-link:hover { color: var(--accent-dark); }
+
+/* ── Fields ─────────────────────────────────── */
+.sv-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sv-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sv-input-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.sv-input {
+  flex: 1;
+  padding: 0.65rem 0.875rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.sv-eye-btn {
+  flex-shrink: 0;
+  font-size: 1rem;
+  padding: 0.5rem 0.65rem;
+}
+
+.sv-key-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.sv-key-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sv-key-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.sv-select {
+  padding: 0.65rem 0.875rem;
+  border-radius: var(--radius-md);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238892A4' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+/* ── Timer options ──────────────────────────── */
+.sv-timer-options {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+
+.sv-timer-btn {
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.sv-timer-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.sv-timer-btn--active {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Theme ──────────────────────────────────── */
+.sv-theme-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.sv-theme-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1rem;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+}
+.sv-theme-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+.sv-theme-btn--active {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sv-theme-icon { font-size: 1.1rem; }
+
+.sv-active-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: auto;
+}
+
+/* ── Save ───────────────────────────────────── */
+.sv-save-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-saved {
+  background: var(--success) !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 123, 0.3) !important;
+}
+
+@media (max-width: 480px) {
+  .sv-theme-row { flex-direction: column; }
+  .sv-timer-options { gap: 0.5rem; }
+}
